@@ -2,16 +2,16 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const router = express.Router();
+//const router = express.Router();
 
 //Rotas
 const index = require('./routes/index');
-const personRoute = require('./routes/personRoute');
+const alunoRoute = require('./routes/alunoRoute');
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use('/', index);
-app.use('/person', personRoute);
+app.use('/aluno', alunoRoute);
 
 module.exports = app;
